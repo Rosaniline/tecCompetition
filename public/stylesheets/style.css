@@ -1,0 +1,77 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}*/
+
+/*a {
+  color: #00B7FF;
+}*/
+
+/*@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}*/
+
+body {
+	font-family: Source Han Sans;
+    min-height: 2000px;
+    padding-top: 100px;
+}
+
+.navbar-custom {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.navbar-nav > li > a {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+	padding-right: 30px !important;
+}
+.navbar .navbar-brand {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+	padding-right: 20px !important;
+	font-size: 250%;
+}
+
+.navbar-brand-bold {
+	font-weight: 900;
+}
+
+.navbar-fixed-top .navbar-brand {
+	color: red;
+}
+
+.navbar-fixed-top a {
+	color: grey;
+}
+
+.navbar-fixed-top .active a {
+	color: red;
+}
+
+.banner {
+	text-align: center;
+	background-color: #BDBDBD;
+	min-height: 600px;
+}
+
+.content {
+	text-align: center;
+	min-height: 600px;
+}
+
+.footer1 {
+	text-align: center;
+	margin: 0px;
+	background-color: #393939;
+	min-height: 600px
+}
+
+.footer2	 {
+	text-align: center;
+	margin: 0px;
+	background-color: #5E5E5E;
+	min-height: 100px
+}
