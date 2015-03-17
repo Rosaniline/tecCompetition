@@ -3,19 +3,21 @@ extends layout
 block content
 	// Fixed navbar
 	nav.navbar.navbar-custom.navbar-fixed-top
-		div.container
+		div.container-fluid
 			div.navbar-header
 				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
 					span.sr-only Toggle navigation
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand(href='#') 臺大
-					span.navbar-brand-bold 種子創業競賽
+				//- a.navbar-brand(href='#')
+				//- 	img(src='images/logo.png' style='max-width:300px;')
 			div#navbar.navbar-collapse.collapse
+
 				ul.nav.navbar-nav
-					// li.active
-						a(href='#') Home
+					//- li.active
+						//- a(href='#')
+					img#img_logo(src='images/logo.png' style='width: 80%;')
 				ul.nav.navbar-nav.navbar-right
 					li.active
 						a(href='#') 最新消息
@@ -28,17 +30,67 @@ block content
 					li
 						a(href='#') Q&A
 					li
-						a(href='#') 線上報名
+						button.btn.rec_btn.s
+							span(style='margin-right: 20px;')
+								img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+							| 線上報名
 
-	div.banner
-		h1 Banner 
+	div.container-fluid#banner
+		div.row
+			div.col-md-2
+				
+			div.col-md-8(style='padding: 3%;')
+				img(src='images/banner_reward.png' style='width: 80%;')
 
-	div.content
+			div.col-md-2
+				img(src='images/cc_logo.png'  style='width: 100%;')
+
+		div.row
+			button.btn.rec_btn 馬上了解 !
+
+	div.container-fluid#content
 		h1 Content
 
-	div.footer1
-		h1 footer1
+	div.container-fluid#footer1
+		div.col-md-4
+			p(style='color: #999999;') 選單
+			hr(style='border-color: #4D4D4D;')
+			//- div.container
+			div.col-md-6(style='padding: 0;')
+				p(style='white-space:pre;') 首頁
+					| 最新消息
+					| 競賽宗旨
+					| 競賽資格
+			div.col-md-6(style='padding: 0;')
+				p(style='white-space:pre;') 
+					| 比賽辦法
+					| 線上報名
+					| Q&A
+		div.col-md-4
+			p(style='color: #999999;') 關於
+			hr(style='border-color: #4D4D4D;')
+			p(style='white-space:pre;')
+				| 為提升台灣創業環境，鼓勵臺人勇敢去逐夢，
+				| 臺大創創中心舉辦『臺大種子創業競賽』，
+				| 希望能幫助創業團隊，點燃火苗，燃燒夢想。
+				| 不怕創業失敗，只怕徒留遺憾，
+				| 只要還有夢想，我們給你機會。
 
-	div.footer2
-		h1 footer2
+		div.col-md-4
+			p(style='color: #999999;') 臺大種子創業競賽
+			hr(style='border-color: #4D4D4D;')
+			p(style='white-space:pre;')
+				| 第一階段初選:  創業概念說明文件
+				| 收件時間:  2015 年 3/23 至 4/5 截止
+				| 第二階段決選:  上台五分鐘闡述你的理念
+				| 決選日期:  5/8(五) 下午 13:00~18:00
+				| 總獎金:  750 萬元
+
+			button.btn.rec_btn.xs
+				span(style='margin-right: 20px;')
+					img(src='images/plus_symbol_red.png' style='margin-top: -4px;')
+				| 馬上報名
+
+	div.container-fluid#footer2
+		p © 2015 臺大創創中心
 
