@@ -15,21 +15,19 @@ block content
 			div#navbar.navbar-collapse.collapse
 
 				ul.nav.navbar-nav
-					//- li.active
-						//- a(href='#')
 					img#img_logo(src='images/logo.png' style='width: 80%;')
 				ul.nav.navbar-nav.navbar-right
-					li.active
+					li#news.active
 						a(href='#') 最新消息
-					li
+					li#spirit
 						a(href='#') 競賽宗旨
-					li
-						a(href='#') 競賽資格
-					li
+					li#flow
+						a(href='#') 競賽流程
+					li#procedure
 						a(href='#') 比賽辦法
-					li
-						a(href='#') Q&A
-					li
+					li#qna
+						a(href='#') Q & A
+					li#apply
 						button.btn.rec_btn.s
 							span(style='margin-right: 20px;')
 								img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
@@ -48,8 +46,92 @@ block content
 		div.row
 			button.btn.rec_btn 馬上了解 !
 
-	div.container-fluid#content
-		h1 Content
+
+	div.container-fluid.title#div_news
+		h1 最新消息
+	div.container-fluid.content#div_spirit
+		div.col-md-6
+			h1(style='padding-bottom: 7%;') 比賽宗旨
+			p(style='white-space:pre;')
+				| 為提升台灣創業環境，鼓勵臺人勇敢去逐夢，
+				| 臺大創創中心舉辦『臺大種子創業競賽』，
+				| 希望能幫助創業團隊，點燃火苗，燃燒夢想。
+				| 不怕創業失敗，只怕徒留遺憾，
+				| 只要還有夢想，我們給你機會。 
+		div.col-md-6(style='border-left: 1px solid #000000;')
+			h1(style='padding-bottom: 7%;') 參賽資格
+			p(style='white-space:pre;')
+				| 尚未成立公司之團隊，
+				| 團隊成員必須包含至少一位臺大學生或畢業校友
+				| 企劃必須為長期的事業，
+				| 而非單次性的計劃或活動。 
+	div.container-fluid.content#div_flow
+		h1(style='padding-bottom: 7%;') 比賽流程
+		img(src='images/flow.png' style='width: 85%;')
+	div.container-fluid.title#div_procedure
+		h1 比賽辦法
+	div.container-fluid.stage
+		h2 第一階段徵選：提交創業概念說明書
+		h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
+	div.container-fluid.content
+		div.col-md-6
+			h2 創業概念說明書需包括
+			p 封面 + 內頁 最多 10 頁為限
+			img(src='images/proposal.png' style='width: 90%;')
+		div.col-md-6
+			h2 評選標準
+			img(src='images/standard.png' style='width: 70%;')
+	div.container-fluid.stage.second
+		h2 第二階段，五分鐘種子競賽！
+	div.container-fluid.content
+		div.row
+			p(style='white-space:pre;')
+				| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
+				| 請在五分鐘內，闡述你的理念。
+				| 說服台下的評審，你就是『希望的種子』。 
+			br
+		div.col-md-6
+			h3(style='padding-bottom: 3%;') 比賽規則
+			p(style='white-space:pre;')
+				| 五分鐘闡述你的理想後，
+				| 將開放現場票選 (使用looped app)
+				| 評審分數每人有10分，觀眾每隊伍1分，
+				| 評審總分*0.7+觀眾分數*0.3，分數高於某個值就過關。 
+		div.col-md-6(style='border-left: 1px solid #000000;')
+			h3(style='line-height: 10%;') 獎金：新台幣 
+				span(style='color: red;') 50 萬元
+			h3 （ 總獎金 750 萬元 ）
+			h5(style='color: #999999;') *評審有增額和不足額的權力
+			br
+			h3 獎金發放方式
+			h5 依照鑽石種子基金管理辦法發放
+	div.container-fluid.content#div_apply
+		h1 線上報名
+	div.container-fluid.content#div_qna
+		h1 Q&A
+		div(style='border: 1px solid #CCCCCC; margin: 4%;')
+			div(style='text-align: left; padding-left: 10%; padding-top: 7%; padding-bottom: 7%;')
+
+				p
+					span.red Q:
+					| 	請問畢業校友可以報名嗎？
+					br
+					span.red A:
+					| 	可以，只要團隊成員內有至少一位臺大學生或校友即可參賽。
+				br
+				p
+					span.red Q:
+					| 	請問獎金發放方式？
+					br
+					span.red A:
+					| 	獎金分兩期發放，您可以在創業概念企劃書中寫您第一階段及第二階段需要的額度。
+				br
+				p
+					span.red Q:
+					| 	是否餅越大，越容易拿獎呢？
+					br
+					span.red A:
+					| 	不是的，我們在第一階段就會針對您團隊能力以及可行性來進行評估。
 
 	div.container-fluid#footer1
 		div.col-md-4
