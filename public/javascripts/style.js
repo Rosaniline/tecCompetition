@@ -77,41 +77,37 @@ $(document).ready(function(){
 	});
 
 
-	$(function(){
 
-		$(document).on("click", ".nav.navbar-nav li", function(e){
+	$(document).on("click", ".nav.navbar-nav li", function(e){
 
-			// Prevent a page reload when a link is pressed
-			e.preventDefault(); 
+		// Prevent a page reload when a link is pressed
+		e.preventDefault(); 
 
-			if ( $(this).attr('id') != 'procedure' ) {
+		if ( $(this).attr('id') != 'procedure' ) {
 
-				var offset = $("#div_" + $(this).attr('id')).offset().top - 70;
+			var offset = $("#div_" + $(this).attr('id')).offset().top - 70;
 
-				$("html, body").animate({
+			$("html, body").animate({
 
-					scrollTop: offset
+				scrollTop: offset
 
-				}, 500);
+			}, 500);
 
-			}
-
-
-
-		});
+		}
 
 	});
 
 	$(".circle").hover(function(){
 
 	    	$(this).stop(true, false).animate({ 
-	    		'background-color': '#CCCCCC',
-	    		'border-color': '#4D4D4D',
-	    		'color': 'black'
+	    		'background-color': 'white',
+	    		'border-color': '#EB623F',
+	    		'color': '#EB623F'
 	    	}, 300);
 
 	    	$(this).find('.des').stop(true, false).animate({ 
-	    		'opacity': '1'
+	    		'opacity': '1',
+	    		'color': '#4D4D4D'
 	    	}, 300);
 
 		}, function() {

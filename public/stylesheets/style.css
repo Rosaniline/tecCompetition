@@ -85,7 +85,7 @@ p {
 	/*padding: 10px;*/
 	border-radius: 1px;
 	border-color: #EB6141;
-	/*margin: 4%;*/
+	margin: 0;
 
 	text-align: center;
 	color: #EB6141;
@@ -148,12 +148,12 @@ p {
 
 .arrow {
 
-	margin: 55px 20px 0px 20px;
+	margin: 65px 20px 0px 20px;
 
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 30px 0 30px 30px;
+	border-width: 20px 0 20px 20px;
 	border-color: transparent transparent transparent #CCCCCC;
 
 }
