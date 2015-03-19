@@ -129,14 +129,7 @@ $(window).scroll(function(){
 
 	alignNavbar($(document).scrollTop());
 
-	console.log("WIN SCROLL DETECT " + $(document).scrollTop());
-
 });
-
-function scrollApply() {
-
-}
-
 
 function alignNavbar(scroll) {
 
