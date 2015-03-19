@@ -44,7 +44,7 @@ block content
 				img(src='images/cc_logo.png'  style='width: 100%;')
 
 		div.row
-			button.btn.rec_btn 馬上了解 !
+			button.btn.rec_btn#btn_more 馬上了解 !
 
 
 	div.container-fluid.title#div_news
@@ -52,7 +52,7 @@ block content
 	div.container-fluid.content#div_spirit
 		div.col-md-6
 			h1(style='padding-bottom: 7%;') 比賽宗旨
-			p(style='white-space:pre;')
+			p
 				| 為提升台灣創業環境，鼓勵臺人勇敢去逐夢，
 				| 臺大創創中心舉辦『臺大種子創業競賽』，
 				| 希望能幫助創業團隊，點燃火苗，燃燒夢想。
@@ -60,14 +60,64 @@ block content
 				| 只要還有夢想，我們給你機會。 
 		div.col-md-6(style='border-left: 1px solid #000000;')
 			h1(style='padding-bottom: 7%;') 參賽資格
-			p(style='white-space:pre;')
+			p
 				| 尚未成立公司之團隊，
 				| 團隊成員必須包含至少一位臺大學生或畢業校友
 				| 企劃必須為長期的事業，
-				| 而非單次性的計劃或活動。 
-	div.container-fluid.content#div_flow
+				| 而非單次性的專案、計畫或活動。 
+	div.container-fluid.content#div_flow(style='padding-left: 0; padding-right:0;')
 		h1(style='padding-bottom: 7%;') 比賽流程
-		img(src='images/flow.png' style='width: 85%;')
+		div.float_center
+			div.circle#c_1
+				h1 1
+				h4 線上報名
+			div.arrow
+			div.circle
+				h1 2
+				h4 第一階段
+				h4 企劃書審查
+			div.arrow
+			div.circle
+				h1 3
+				h4 上台名單公布
+			div.arrow
+			div.circle
+				h1 4
+				h4 五分鐘種子
+				h4 創業競賽
+			div.arrow
+			div.circle
+				h1 5
+				h4 簽訂合約
+				h4 發放獎金50萬
+
+		// div.row
+			div.col-md-1
+			div.col-md-1
+				div.circle
+					h1 1
+					h4 線上報名
+			div.col-md-1
+				div.arrow-right
+			div.col-md-1
+				div.circle
+					h1 2
+					h4 第一階段
+					h4 企劃書審查
+			div.col-md-1
+				div.arrow-right
+			div.col-md-1
+				
+			div.col-md-1
+				div.arrow-right
+			div.col-md-1
+				
+			div.col-md-1
+				div.arrow-right
+			div.col-md-1
+			
+
+		//- img(src='images/flow.png' style='width: 85%;')
 	div.container-fluid.title#div_procedure
 		h1 比賽辦法
 	div.container-fluid.stage
@@ -80,19 +130,21 @@ block content
 			img(src='images/proposal.png' style='width: 90%;')
 		div.col-md-6
 			h2 評選標準
+			// div#canvas-holder(style='padding-right: 10%; padding-top: 10%;')
+				canvas#chart-area(style='width: 120%;')
 			img(src='images/standard.png' style='width: 70%;')
 	div.container-fluid.stage.second
 		h2 第二階段，五分鐘種子競賽！
 	div.container-fluid.content
 		div.row
-			p(style='white-space:pre;')
+			p
 				| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
 				| 請在五分鐘內，闡述你的理念。
 				| 說服台下的評審，你就是『希望的種子』。 
 			br
 		div.col-md-6
 			h3(style='padding-bottom: 3%;') 比賽規則
-			p(style='white-space:pre;')
+			p
 				| 五分鐘闡述你的理想後，
 				| 將開放現場票選 (使用looped app)
 				| 評審分數每人有10分，觀眾每隊伍1分，
@@ -139,36 +191,36 @@ block content
 			hr(style='border-color: #4D4D4D;')
 			//- div.container
 			div.col-md-6(style='padding: 0;')
-				p(style='white-space:pre;') 首頁
+				p 首頁
 					| 最新消息
 					| 競賽宗旨
 					| 競賽資格
 			div.col-md-6(style='padding: 0;')
-				p(style='white-space:pre;') 
+				p 
 					| 比賽辦法
 					| 線上報名
 					| Q&A
 		div.col-md-4
 			p(style='color: #999999;') 關於
 			hr(style='border-color: #4D4D4D;')
-			p(style='white-space:pre;')
-				| 為提升台灣創業環境，鼓勵臺人勇敢去逐夢，
+			p
+				| 為提升臺灣創業環境，鼓勵臺灣人勇敢逐夢，
 				| 臺大創創中心舉辦『臺大種子創業競賽』，
-				| 希望能幫助創業團隊，點燃火苗，燃燒夢想。
+				| 希望能幫助創業團隊，點燃夢想。
 				| 不怕創業失敗，只怕徒留遺憾，
 				| 只要還有夢想，我們給你機會。
 
 		div.col-md-4
 			p(style='color: #999999;') 臺大種子創業競賽
 			hr(style='border-color: #4D4D4D;')
-			p(style='white-space:pre;')
+			p
 				| 第一階段初選:  創業概念說明文件
 				| 收件時間:  2015 年 3/23 至 4/5 截止
 				| 第二階段決選:  上台五分鐘闡述你的理念
 				| 決選日期:  5/8(五) 下午 13:00~18:00
 				| 總獎金:  750 萬元
 
-			button.btn.rec_btn.xs
+			button.btn.rec_btn.xs#btn_apply
 				span(style='margin-right: 20px;')
 					img(src='images/plus_symbol_red.png' style='margin-top: -4px;')
 				| 馬上報名

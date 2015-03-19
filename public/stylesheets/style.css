@@ -5,6 +5,10 @@ body {
     font-family: "adobe-clean",helvetica,arial,sans-serif;
 }
 
+p {
+	white-space: pre;
+}
+
 .navbar-nav > li > a:hover {
 
 	background-color: white;
@@ -88,6 +92,61 @@ body {
 	/*font-weight: bold;*/
 	font-size: 100%;
 }
+
+.float_center {
+	float: right;
+
+	position: relative;
+	left: -50%; /* or right 50% */
+	text-align: left;
+}
+
+.float_center > * {
+
+	float: left;
+	position: relative;
+	left: 50%;
+	display: inline;
+
+}
+
+.circle { 
+
+	width: 170px;
+	height: 170px;
+	border-radius: 100px;
+	/*border-color: black;
+	border-width: 2px;*/
+	border: 2px solid #CCCCCC;
+
+	color: #4D4D4D;
+	/*line-height: 150px;*/
+	text-align: center;
+	background: #F8F7F7;
+}
+
+.circle h1 {
+	color: inherit;
+	line-height: 110%;
+}
+
+.circle h4 {
+	line-height: 100%;	
+}
+
+.arrow {
+
+	margin: 55px 20px 0px 20px;
+
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 0 30px 30px;
+	border-color: transparent transparent transparent #CCCCCC;
+
+}
+
+
 
 
 
