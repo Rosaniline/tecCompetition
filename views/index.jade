@@ -158,9 +158,51 @@ block content
 				br
 				h3 獎金發放方式
 				h5 依照鑽石種子基金管理辦法發放
-	div.container-fluid.content#div_apply(style='height:500px;')
+	div.container-fluid.content#div_apply
 		h1 線上報名
-		h2(style='color: #BBBBBB; margin-top: 10%') 3/23(一) 開始報名 !
+		h2(style='color: #BBBBBB;') 3/23(一) 開始報名 !
+		div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 0 5% 0; margin: 0 10% 0 10%; font-size: 110%;')
+			div.row
+				//- div.col-md-1
+				div.col-md-6
+					form.form-horizontal
+						div.form-group
+							label.col-sm-4.control-label 負責人
+							div.col-sm-8
+								input.form-control(disabled)
+						div.form-group
+							label.col-sm-4.control-label 就讀/畢業學校
+							div.col-sm-8
+								input.form-control(disabled)
+						div.form-group
+							label.col-sm-4.control-label 團隊名稱
+							div.col-sm-8
+								input.form-control(disabled)
+			div.row
+				//- div.col-md-1
+				div.col-md-8
+					form.form-horizontal
+						div.form-group
+							label.col-sm-3.control-label 團隊人員
+							div.col-sm-9
+								input.form-control(disabled)
+						div.form-group
+							label.col-sm-3.control-label 創業名稱
+							div.col-sm-9
+								input.form-control(disabled)
+			div.row
+				div.col-md-2
+				div.col-md-9(style='text-align: left;')
+					label.control-label 創業概念 (300字以內)：
+					textarea.form-control(rows="5" disabled)
+					button.btn.rec_btn.s(style='width: 100%; margin: 0;')
+						span(style='margin-right: 20px;')
+							img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+						| 創業說明書上傳
+
+
+
+
 	div.container-fluid.content#div_qna
 		h1 Q&A
 		div(style='border: 1px solid #CCCCCC; margin: 4%;')
