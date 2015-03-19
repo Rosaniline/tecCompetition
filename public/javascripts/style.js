@@ -36,15 +36,13 @@ $(document).ready(function(){
 
 		$("html, body").animate({
 
-			scrollTop: $("#div_news").offset().top - 50
+			scrollTop: $("#div_spirit").offset().top - 50
 
 		}, 500);
 
 	});
 
 	$(document).on("click", "#btn_apply", function(e){
-
-		console.log("123");
 
 		// Prevent a page reload when a link is pressed
 		e.preventDefault(); 
@@ -57,6 +55,27 @@ $(document).ready(function(){
 
 	});
 
+	$(document).on("click", "#footer1 #link_menu a", function(e){
+
+		// Prevent a page reload when a link is pressed
+		e.preventDefault(); 
+
+		if ( $(this).attr('id') != 'procedure' ) {
+
+			var offset = $("#div_" + $(this).attr('id').substr(2)).offset().top - 70;
+
+			$("html, body").animate({
+
+				scrollTop: offset
+
+			}, 500);
+
+		}
+
+
+
+	});
+
 
 	$(function(){
 
@@ -65,13 +84,19 @@ $(document).ready(function(){
 			// Prevent a page reload when a link is pressed
 			e.preventDefault(); 
 
-			var offset = $("#div_" + $(this).attr('id')).offset().top - 50;
+			if ( $(this).attr('id') != 'procedure' ) {
 
-			$("html, body").animate({
+				var offset = $("#div_" + $(this).attr('id')).offset().top - 70;
 
-				scrollTop: offset
+				$("html, body").animate({
 
-			}, 500);
+					scrollTop: offset
+
+				}, 500);
+
+			}
+
+
 
 		});
 
@@ -85,6 +110,10 @@ $(document).ready(function(){
 	    		'color': 'black'
 	    	}, 300);
 
+	    	$(this).find('.des').stop(true, false).animate({ 
+	    		'opacity': '1'
+	    	}, 300);
+
 		}, function() {
 
 		    $(this).stop(true, false).animate({ 
@@ -92,6 +121,10 @@ $(document).ready(function(){
 		    	'border-color': '#CCCCCC',
 	    		'color': '#4D4D4D'
 		    }, 300);
+
+	    	$(this).find('.des').stop(true, false).animate({ 
+	    		'opacity': '0'
+	    	}, 300);
 	});
 
 });
@@ -113,7 +146,7 @@ function alignNavbar(scroll) {
 
 	scroll = Math.max(0, (Math.min(150, scroll - 730 + 200)));
 
-	$('#img_logo').css('width', (80 - scroll/5) + '%');
+	$('#img_logo').css('width', (75 - scroll/6) + '%');
 
 	var h = parseInt($('#img_logo').css('height'))/2 - 10;
 
@@ -126,46 +159,4 @@ function alignNavbar(scroll) {
 
 }
 
-var pieData = [
-				{
-					value: 20,
-					color:"#F7464A",
-					highlight: "#FF5A5E",
-					label: "產品創新程度"
-				},
-				{
-					value: 20,
-					color: "#46BFBD",
-					highlight: "#5AD3D1",
-					label: "產品商機"
-				},
-				{
-					value: 20,
-					color: "#FDB45C",
-					highlight: "#FFC870",
-					label: "團隊熱情與分工"
-				},
-				{
-					value: 20,
-					color: "#949FB1",
-					highlight: "#A8B3C5",
-					label: "影響規模"
-				},
-				{
-					value: 20,
-					color: "#4D5360",
-					highlight: "#616774",
-					label: "可行性評估"
-				}
-
-			];
-
-// window.onload = function(){
-// 	var ctx = document.getElementById("chart-area").getContext("2d");
-// 	window.myPie = new Chart(ctx).Pie(pieData, {
-// 	    animateScale: true,
-// 	    showScale: true
-// 	});
-
-// };
 

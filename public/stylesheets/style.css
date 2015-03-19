@@ -1,6 +1,6 @@
 body {
     /*min-height: 2000px;*/
-    padding-top: 130px;
+    /*padding-top: 130px;*/
 
     font-family: "adobe-clean",helvetica,arial,sans-serif;
 }
@@ -118,6 +118,7 @@ p {
 	/*border-color: black;
 	border-width: 2px;*/
 	border: 2px solid #CCCCCC;
+	margin-bottom: 5%;
 
 	color: #4D4D4D;
 	/*line-height: 150px;*/
@@ -132,6 +133,17 @@ p {
 
 .circle h4 {
 	line-height: 100%;	
+}
+
+.circle .des {
+
+	/*display: none;*/
+
+	opacity: 0;
+
+	text-align: center; 
+	padding-top: 25%; 
+	margin:0 -40% 0 -40%;
 }
 
 .arrow {
@@ -261,6 +273,11 @@ h1 {
 	color: #CCCCCC;
 	line-height: 200%;
 	
+}
+
+#footer1 a {
+	color: inherit;
+	text-decoration: none;
 }
 
 #footer2	 {

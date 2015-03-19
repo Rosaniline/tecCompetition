@@ -1,6 +1,7 @@
 extends layout
 
 block content
+	div#div_top(style='height: 130px;')
 	// Fixed navbar
 	nav.navbar.navbar-custom.navbar-fixed-top
 		div.container-fluid
@@ -15,16 +16,22 @@ block content
 			div#navbar.navbar-collapse.collapse
 
 				ul.nav.navbar-nav
-					img#img_logo(src='images/logo.png' style='width: 80%;')
+					img#img_logo(src='images/logo.png' style='width: 75%;')
 				ul.nav.navbar-nav.navbar-right
-					li#news.active
+					//li#news.active
 						a(href='#') 最新消息
-					li#spirit
+					li#spirit.active
 						a(href='#') 競賽宗旨
 					li#flow
 						a(href='#') 競賽流程
-					li#procedure
-						a(href='#') 比賽辦法
+					li.dropdown#procedure
+						a.dropdown-toggle(href='#' data-toggle="dropdown" role="button" aria-expanded="false") 競賽辦法
+							span.caret
+								ul.dropdown-menu(role="menu")
+									li#stageFst
+										a(href='#') 第一階段初選：提交創業概念說明書
+									li#stageSnd
+										a(href='#') 第二階段，五分鐘種子競賽！
 					li#qna
 						a(href='#') Q & A
 					li#apply
@@ -47,11 +54,11 @@ block content
 			button.btn.rec_btn#btn_more 馬上了解 !
 
 
-	div.container-fluid.title#div_news
+	// div.container-fluid.title#div_news
 		h1 最新消息
 	div.container-fluid.content#div_spirit
 		div.col-md-6
-			h1(style='padding-bottom: 7%;') 比賽宗旨
+			h1(style='padding-bottom: 7%;') 競賽宗旨
 			p
 				| 為提升台灣創業環境，鼓勵臺人勇敢去逐夢，
 				| 臺大創創中心舉辦『臺大種子創業競賽』，
@@ -66,99 +73,94 @@ block content
 				| 企劃必須為長期的事業，
 				| 而非單次性的專案、計畫或活動。 
 	div.container-fluid.content#div_flow(style='padding-left: 0; padding-right:0;')
-		h1(style='padding-bottom: 7%;') 比賽流程
+		h1(style='padding-bottom: 2%;') 競賽流程
 		div.float_center
+			div
 			div.circle#c_1
 				h1 1
 				h4 線上報名
+				h4 &nbsp;
+				div.des
+					h4 需繳交創業概念書
 			div.arrow
 			div.circle
 				h1 2
 				h4 第一階段
 				h4 企劃書審查
+				div.des
+					h4 書審
+					h4 評審以 A，B，C 為標準進行評分
 			div.arrow
 			div.circle
 				h1 3
 				h4 上台名單公布
+				h4 &nbsp;
+				div.des
+					h4 我們將挑選 30 隊伍
+					h4 參加五分鐘種子創業競賽
 			div.arrow
 			div.circle
 				h1 4
 				h4 五分鐘種子
 				h4 創業競賽
+				div.des
+					h4 上台開始後計時五分鐘
+					h4 時間一到麥克風消音
 			div.arrow
 			div.circle
 				h1 5
 				h4 簽訂合約
 				h4 發放獎金50萬
-
-		// div.row
-			div.col-md-1
-			div.col-md-1
-				div.circle
-					h1 1
-					h4 線上報名
-			div.col-md-1
-				div.arrow-right
-			div.col-md-1
-				div.circle
-					h1 2
-					h4 第一階段
-					h4 企劃書審查
-			div.col-md-1
-				div.arrow-right
-			div.col-md-1
-				
-			div.col-md-1
-				div.arrow-right
-			div.col-md-1
-				
-			div.col-md-1
-				div.arrow-right
-			div.col-md-1
-			
-
+				div.des
+					h4 獎金來源
+					h4 臺大鑽石種子基金
+					h4 分兩期發放，每期三個月為度
 		//- img(src='images/flow.png' style='width: 85%;')
-	div.container-fluid.title#div_procedure
-		h1 比賽辦法
-	div.container-fluid.stage
-		h2 第一階段徵選：提交創業概念說明書
-		h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
-	div.container-fluid.content
-		div.col-md-6
-			h2 創業概念說明書需包括
-			p 封面 + 內頁 最多 10 頁為限
-			img(src='images/proposal.png' style='width: 90%;')
-		div.col-md-6
-			h2 評選標準
-			// div#canvas-holder(style='padding-right: 10%; padding-top: 10%;')
-				canvas#chart-area(style='width: 120%;')
-			img(src='images/standard.png' style='width: 70%;')
-	div.container-fluid.stage.second
-		h2 第二階段，五分鐘種子競賽！
-	div.container-fluid.content
-		div.row
-			p
-				| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
-				| 請在五分鐘內，闡述你的理念。
-				| 說服台下的評審，你就是『希望的種子』。 
-			br
-		div.col-md-6
-			h3(style='padding-bottom: 3%;') 比賽規則
-			p
-				| 五分鐘闡述你的理想後，
-				| 將開放現場票選 (使用looped app)
-				| 評審分數每人有10分，觀眾每隊伍1分，
-				| 評審總分*0.7+觀眾分數*0.3，分數高於某個值就過關。 
-		div.col-md-6(style='border-left: 1px solid #000000;')
-			h3(style='line-height: 10%;') 獎金：新台幣 
-				span(style='color: red;') 50 萬元
-			h3 （ 總獎金 750 萬元 ）
-			h5(style='color: #999999;') *評審有增額和不足額的權力
-			br
-			h3 獎金發放方式
-			h5 依照鑽石種子基金管理辦法發放
-	div.container-fluid.content#div_apply
+	div.container-fluid.title#div_procedure(style='padding: 8%')
+		h1(style='padding-bottom: 7%;') 競賽辦法
+		div.container-fluid.stage#div_stageFst
+			h2 第一階段初選：提交創業概念說明書
+			h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
+		div.container-fluid.content(style='background-color: #F8F7F7; margin-bottom:7%;')
+			div.col-md-6
+				h2 創業概念說明書需包括
+				p 封面 + 內頁 最多 10 頁為限
+				img(src='images/proposal.png' style='width: 90%;')
+			div.col-md-6
+				h2 評選標準
+				// div#canvas-holder(style='padding-right: 10%; padding-top: 10%;')
+					canvas#chart-area(style='width: 120%;')
+				img(src='images/standard.png' style='width: 70%;')
+		div.container-fluid.stage.second#div_stageSnd
+			h2 第二階段，五分鐘種子競賽！
+		div.container-fluid.content(style='background-color: #F8F7F7;')
+			div.row
+				p
+					| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
+					| 請在五分鐘內，闡述你的理念。
+					| 說服台下的評審，你就是『希望的種子』。 
+				br
+			div.col-md-6
+				h3(style='padding-bottom: 3%;') 競賽規則
+				p
+					| 五分鐘闡述你的理想後，
+					| 將開放現場票選 (使用looped app)
+					| 評審分數每人有10分，觀眾每隊伍1分，
+					| 評審總分*0.7+觀眾分數*0.3，分數高於某個值就過關。 
+					
+			div.col-md-6(style='border-left: 1px solid #000000;')
+				h3(style='line-height: 10%;') 獎金：新台幣 
+					span(style='color: red;') 50 萬元
+				h3 （ 總獎金 750 萬元 ）
+				h5(style='color: #999999; white-space: pre;') 
+					| *評審小組與主辦單位得視競賽情形作成從缺、或獎金增額之決議。
+					| 主辦單位保有修改、終止、變更活動內容細節之權利，且不另行通知。
+				br
+				h3 獎金發放方式
+				h5 依照鑽石種子基金管理辦法發放
+	div.container-fluid.content#div_apply(style='height:500px;')
 		h1 線上報名
+		h2(style='color: #BBBBBB; margin-top: 10%') 3/23(一) 開始報名 !
 	div.container-fluid.content#div_qna
 		h1 Q&A
 		div(style='border: 1px solid #CCCCCC; margin: 4%;')
@@ -186,20 +188,26 @@ block content
 					| 	不是的，我們在第一階段就會針對您團隊能力以及可行性來進行評估。
 
 	div.container-fluid#footer1
-		div.col-md-4
+		div.col-md-4#link_menu
 			p(style='color: #999999;') 選單
 			hr(style='border-color: #4D4D4D;')
 			//- div.container
 			div.col-md-6(style='padding: 0;')
-				p 首頁
-					| 最新消息
-					| 競賽宗旨
-					| 競賽資格
+				a#a_top(href='#') 首頁
+				br
+				a#a_spirit(href='#') 競賽宗旨
+				br
+				a#a_flow(href='#') 競賽流程
+				br
+				a#a_apply(href='#') 線上報名
 			div.col-md-6(style='padding: 0;')
-				p 
-					| 比賽辦法
-					| 線上報名
-					| Q&A
+				a#procedure(href='#') 競賽辦法
+				br
+				a#a_stageFst(href='#' style='margin-left: 15%;') 第一階段初選
+				br
+				a#a_stageSnd(href='#' style='margin-left: 15%;') 第二階段
+				br
+				a#a_qna(href='#') Q & A
 		div.col-md-4
 			p(style='color: #999999;') 關於
 			hr(style='border-color: #4D4D4D;')
@@ -215,8 +223,9 @@ block content
 			hr(style='border-color: #4D4D4D;')
 			p
 				| 第一階段初選:  創業概念說明文件
-				| 收件時間:  2015 年 3/23 至 4/5 截止
-				| 第二階段決選:  上台五分鐘闡述你的理念
+				| 收件期間:  2015 年 3/23 至 4/5 截止
+				| 第二階段決選:  上台五分鐘闡述你的理念，
+				| 說服評審給你 50 萬，驗證你的創業概念！
 				| 決選日期:  5/8(五) 下午 13:00~18:00
 				| 總獎金:  750 萬元
 
