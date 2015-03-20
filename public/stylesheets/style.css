@@ -2,7 +2,7 @@ body {
     /*min-height: 2000px;*/
     /*padding-top: 130px;*/
 
-    font-family: "adobe-clean",helvetica,arial,sans-serif;
+    font-family: 'LiHei', '微軟正黑體', "adobe-clean",helvetica,arial,sans-serif;
 }
 
 p {
@@ -211,7 +211,7 @@ p {
 
 h1 {
 	font-size: 350%;
-	/*font-weight: bold;*/
+	font-weight: bold;
 
 	text-align: center;
 	color: #EB623F;
@@ -219,8 +219,12 @@ h1 {
 	/*padding-bottom: 10%;*/
 }
 
+h2 {
+	font-weight: bold;
+}
+
 .content td {
-	font-size: 130%;
+	/*font-size: 130%;*/
 }
 
 .red {
@@ -257,6 +261,10 @@ h1 {
 
 #div_apply {
 	background-color: #F8F7F7;
+}
+
+#div_apply .control-label {
+	font-weight: normal;
 }
 
 #footer1 {
