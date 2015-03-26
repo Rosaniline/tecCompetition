@@ -161,22 +161,45 @@ p {
 
 }
 
+.bx-wrapper .bx-prev {
+	left: 20px;
+	background: url(/images/controls.png) no-repeat 0 -32px;
+	opacity: 0.5;
+}
+
+.bx-wrapper .bx-next {
+	right: 20px;
+	background: url(/images/controls.png) no-repeat -43px -32px;
+	opacity: 0.5;
+}
 
 
 
 
-
-#banner {
-	min-height: 600px;
-
-	/*padding: 3%;*/
+#banner_fst {
+	height: 100vh;
 	text-align: center;
 	background-image: url('/images/banner1_bg.png');
 	background-repeat: repeat;
+}
 
-	/*border-style: solid;
-	border-width: 1px;
-	border-color: #CCCCCC;*/
+#banner_snd {
+	height: 100vh;
+	text-align: center;
+	background-image: url('/images/banner2_bg.png');
+	background-repeat: repeat;
+}
+
+#banner {
+
+	padding-top: 150px;
+	text-align: center;
+}
+
+#banner img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {

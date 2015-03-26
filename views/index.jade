@@ -1,7 +1,31 @@
 extends layout
 
 block content
-	div#div_top(style='height: 130px;')
+	//- div(style='height: 130px;')
+	div#div_top.banner_slider
+		div#banner_fst
+			//- img(src='images/banner_reward.png' style='width: 50%;')
+			div.container-fluid#banner
+				div.row
+					div.col-md-2
+						
+					div.col-md-8
+						img(src='images/banner_reward.png' style='width: 80%;')
+
+					div.col-md-2
+						img(src='images/cc_logo.png' style='width: 100%;')
+
+				div.row(style='padding-top: 3%')
+					button.btn.rec_btn#btn_more 馬上了解 !
+		div#banner_snd
+			div.container-fluid#banner
+				div.row(style='padding-top: 30px;')
+					div.col-md-3(style='padding: 0; ')
+						img(src='images/banner2_content2.png' style='width: 100%;')
+					div.col-md-9(style='padding-top: 40px;')
+						img(src='images/banner2_content1.png' style='width: 90%; align: left;')
+
+
 	span(itemscope itemtype="http://schema.org/Event")
 		// Fixed navbar
 		nav.navbar.navbar-custom.navbar-fixed-top
@@ -41,18 +65,18 @@ block content
 									img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
 								| 線上報名
 
-		div.container-fluid#banner
-			div.row
-				div.col-md-2
+		//- div.container-fluid#banner
+		//- 	div.row
+		//- 		div.col-md-2
 					
-				div.col-md-8(style='padding: 3%;')
-					img(src='images/banner_reward.png' style='width: 80%;')
+		//- 		div.col-md-8(style='padding: 3%;')
+		//- 			img(src='images/banner_reward.png' style='width: 80%;')
 
-				div.col-md-2
-					img(src='images/cc_logo.png'  style='width: 100%;')
+		//- 		div.col-md-2
+		//- 			img(src='images/cc_logo.png'  style='width: 100%;')
 
-			div.row
-				button.btn.rec_btn#btn_more 馬上了解 !
+		//- 	div.row
+		//- 		button.btn.rec_btn#btn_more 馬上了解 !
 
 
 		// div.container-fluid.title#div_news
