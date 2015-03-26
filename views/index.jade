@@ -2,280 +2,326 @@ extends layout
 
 block content
 	div#div_top(style='height: 130px;')
-	// Fixed navbar
-	nav.navbar.navbar-custom.navbar-fixed-top
-		div.container-fluid
-			div.navbar-header
-				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				//- a.navbar-brand(href='#')
-				//- 	img(src='images/logo.png' style='max-width:300px;')
-			div#navbar.navbar-collapse.collapse
+	span(itemscope itemtype="http://schema.org/Event")
+		// Fixed navbar
+		nav.navbar.navbar-custom.navbar-fixed-top
+			div.container-fluid
+				div.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					//- a.navbar-brand(href='#')
+					//- 	img(src='images/logo.png' style='max-width:300px;')
+				div#navbar.navbar-collapse.collapse
 
-				ul.nav.navbar-nav
-					img#img_logo(src='images/logo.png' style='width: 75%;')
-				ul.nav.navbar-nav.navbar-right
-					//li#news.active
-						a(href='#') 最新消息
-					li#spirit.active
-						a(href='#') 競賽宗旨
-					li#flow
-						a(href='#') 競賽流程
-					li.dropdown#procedure
-						a.dropdown-toggle(href='#' data-toggle="dropdown" role="button" aria-expanded="false") 競賽辦法
-							span.caret
-								ul.dropdown-menu(role="menu")
-									li#stageFst
-										a(href='#' style='margin: 5% 5% 0 0;') 第一階段初選：提交創業概念說明書
-									li#stageSnd
-										a(href='#' style='margin: 5% 0 5% 0;') 第二階段，五分鐘種子競賽！
-					li#qna
-						a(href='#') Q & A
-					li#apply
-						button.btn.rec_btn.s
-							span(style='margin-right: 20px;')
-								img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
-							| 線上報名
+					ul.nav.navbar-nav
+						img#img_logo(src='images/logo.png' style='width: 75%;' itemprop='image')
+					ul.nav.navbar-nav.navbar-right
+						//li#news.active
+							a(href='#') 最新消息
+						li#spirit.active
+							a(href='#') 競賽宗旨
+						li#flow
+							a(href='#') 競賽流程
+						li.dropdown#procedure
+							a.dropdown-toggle(href='#' data-toggle="dropdown" role="button" aria-expanded="false") 競賽辦法
+								span.caret
+									ul.dropdown-menu(role="menu")
+										li#stageFst
+											a(href='#' style='margin: 5% 5% 0 0;') 第一階段初選：提交創業概念說明書
+										li#stageSnd
+											a(href='#' style='margin: 5% 0 5% 0;') 第二階段，五分鐘種子競賽！
+						li#qna
+							a(href='#') Q & A
+						li#apply
+							button.btn.rec_btn.s
+								span(style='margin-right: 20px;')
+									img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+								| 線上報名
 
-	div.container-fluid#banner
-		div.row
-			div.col-md-2
-				
-			div.col-md-8(style='padding: 3%;')
-				img(src='images/banner_reward.png' style='width: 80%;')
-
-			div.col-md-2
-				img(src='images/cc_logo.png'  style='width: 100%;')
-
-		div.row
-			button.btn.rec_btn#btn_more 馬上了解 !
-
-
-	// div.container-fluid.title#div_news
-		h1 最新消息
-	div.container-fluid.content#div_spirit
-		div.col-md-6
-			h1(style='padding-bottom: 7%;') 競賽宗旨
-			p
-				| 為提升臺灣創業環境，鼓勵臺灣人勇敢逐夢，
-				| 臺大創創中心舉辦『臺大種子創業競賽』，
-				| 希望能幫助創業團隊，點燃夢想。
-				| 不怕創業失敗，只怕徒留遺憾，
-				| 只要還有夢想，我們給你機會。
-		div.col-md-6(style='border-left: 1px solid #000000;')
-			h1(style='padding-bottom: 7%;') 參賽資格
-			p
-				| 尚未成立公司之團隊，
-				| 團隊成員必須包含至少一位臺大學生或畢業校友
-				| 企劃必須為長期的事業，
-				| 而非單次性的專案、計畫或活動。 
-	div.container-fluid.content#div_flow(style='padding-left: 0; padding-right:0;')
-		h1(style='padding-bottom: 7%;') 競賽流程
-		div.float_center
-			div
-			div.circle#c_1
-				h1 1
-				h4 線上報名
-				h4 &nbsp;
-				div.des
-					h4 需繳交創業概念書
-			div.arrow
-			div.circle
-				h1 2
-				h4 第一階段
-				h4 企劃書審查
-				div.des
-					h4 書審
-					h4 評審以 A，B，C 為標準進行評分
-			div.arrow
-			div.circle
-				h1 3
-				h4 上台名單公布
-				h4 &nbsp;
-				div.des
-					h4 我們將挑選 30 隊伍
-					h4 參加五分鐘種子創業競賽
-			div.arrow
-			div.circle
-				h1 4
-				h4 五分鐘種子
-				h4 創業競賽
-				div.des
-					h4 上台開始後計時五分鐘
-					h4 時間一到麥克風消音
-			div.arrow
-			div.circle
-				h1 5
-				h4 簽訂合約
-				h4 發放獎金50萬
-				div.des
-					h4 獎金來源
-					h4 臺大鑽石種子基金
-					h4 分兩期發放，每期三個月為度
-		//- img(src='images/flow.png' style='width: 85%;')
-	div.container-fluid.title#div_procedure(style='padding: 8%')
-		h1(style='padding-bottom: 7%;') 競賽辦法
-		div.container-fluid.stage#div_stageFst
-			h2 第一階段初選：提交創業概念說明書
-			h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
-		div.container-fluid.content(style='background-color: #F8F7F7; margin-bottom:7%;')
-			div.col-md-6
-				h2 創業概念說明書需包括
-				p 封面 + 內頁 最多 10 頁為限
-				img(src='images/proposal.png' style='width: 90%;')
-			div.col-md-6
-				h2 評選標準
-				// div#canvas-holder(style='padding-right: 10%; padding-top: 10%;')
-					canvas#chart-area(style='width: 120%;')
-				img(src='images/standard.png' style='width: 70%;')
-		div.container-fluid.stage.second#div_stageSnd
-			h2 第二階段，五分鐘種子競賽！
-		div.container-fluid.content(style='background-color: #F8F7F7;')
-			div.row
-				p
-					| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
-					| 請在五分鐘內，闡述你的理念。
-					| 說服台下的評審，你就是『希望的種子』。 
-				br
-			div.col-md-6
-				h2(style='padding-bottom: 3%;') 競賽規則
-				p
-					| 五分鐘闡述你的理想後，
-					| 將開放現場票選 (使用looped app)
-					| 評審分數每人有10分，觀眾每隊伍1分，
-					| 評審總分*0.7+觀眾分數*0.3，分數高於某個值就過關。 
-					
-			div.col-md-6(style='border-left: 1px solid #000000;')
-				h2(style='line-height: 10%;') 獎金：新台幣 
-					span(style='color: #EB623F;') 50 萬元
-				h2 （ 總獎金 750 萬元 ）
-				h5(style='color: #999999; white-space: pre;') 
-					| *評審小組與主辦單位得視競賽情形作成從缺、或獎金增額之決議。
-					| 主辦單位保有修改、終止、變更活動內容細節之權利，且不另行通知。
-				br
-				h2 獎金發放方式
-				h4 依照鑽石種子基金管理辦法發放
-	div.container-fluid.content#div_apply
-		h1 線上報名
-		h2(style='color: #BBBBBB;') 3/23(一) 開始報名 !
-		div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 0 5% 0; margin: 0 10% 0 10%; font-size: 110%;')
-			div.row
-				//- div.col-md-1
-				div.col-md-6
-					form.form-horizontal
-						div.form-group
-							label.col-sm-4.control-label 負責人
-							div.col-sm-8
-								input.form-control(disabled)
-						div.form-group
-							label.col-sm-4.control-label 就讀/畢業學校
-							div.col-sm-8
-								input.form-control(disabled)
-						div.form-group
-							label.col-sm-4.control-label 團隊名稱
-							div.col-sm-8
-								input.form-control(disabled)
-			div.row
-				//- div.col-md-1
-				div.col-md-8
-					form.form-horizontal
-						div.form-group
-							label.col-sm-3.control-label 團隊人員
-							div.col-sm-9
-								input.form-control(disabled)
-						div.form-group
-							label.col-sm-3.control-label 創業名稱
-							div.col-sm-9
-								input.form-control(disabled)
+		div.container-fluid#banner
 			div.row
 				div.col-md-2
-				div.col-md-9(style='text-align: left;')
-					label.control-label 創業概念 (300字以內)：
-					textarea.form-control(rows="5" disabled)
-					button.btn.rec_btn.s(style='width: 100%; margin: 0;')
-						span(style='margin-right: 20px;')
-							img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
-						| 創業說明書上傳
+					
+				div.col-md-8(style='padding: 3%;')
+					img(src='images/banner_reward.png' style='width: 80%;')
+
+				div.col-md-2
+					img(src='images/cc_logo.png'  style='width: 100%;')
+
+			div.row
+				button.btn.rec_btn#btn_more 馬上了解 !
 
 
-
-
-	div.container-fluid.content#div_qna
-		h1 Q & A
-		div(style='border: 1px solid #CCCCCC; margin: 4%;')
-			div(style='text-align: left; padding-left: 10%; padding-top: 7%; padding-bottom: 7%;')
-
+		// div.container-fluid.title#div_news
+			h1 最新消息
+		div.container-fluid.content#div_spirit
+			div.col-md-6
+				h1(style='padding-bottom: 7%;') 競賽宗旨
 				p
-					span.red Q:
-					| 	請問畢業校友可以報名嗎？
-					br
-					span.red A:
-					| 	可以，只要團隊成員內有至少一位臺大學生或校友即可參賽。
-				br
+					| 為提升臺灣創業環境，鼓勵臺灣人勇敢逐夢，
+					| 臺大創創中心舉辦『臺大種子創業競賽』，
+					| 希望能幫助創業團隊，點燃夢想。
+					| 不怕創業失敗，只怕徒留遺憾，
+					| 只要還有夢想，我們給你機會。
+			div.col-md-6(style='border-left: 1px solid #000000;')
+				h1(style='padding-bottom: 7%;') 參賽資格
 				p
-					span.red Q:
-					| 	請問獎金發放方式？
+					| 尚未成立公司之團隊，
+					| 團隊成員必須包含至少一位臺大學生或畢業校友
+					| 企劃必須為長期的事業，
+					| 而非單次性的專案、計畫或活動。 
+		div.container-fluid.content#div_flow(style='padding-left: 0; padding-right:0;')
+			h1(style='padding-bottom: 7%;') 競賽流程
+			div.float_center
+				div
+				div.circle#c_1
+					h1 1
+					h4 線上報名
+					h4 &nbsp;
+					div.des
+						h4 填寫表單並上傳創業說明書
+						h4 報名時間即日起 ~ 4/13 號 12:00
+				div.arrow
+				div.circle
+					h1 2
+					h4 第一階段
+					h4 企劃書審查
+					div.des
+						h4 評審將依據  
+						h4 創新性 40%  &nbsp; 市場發展潛力 30%  &nbsp; 構想可行性 30%
+						h4 進行給分
+				div.arrow
+				div.circle
+					h1 3
+					h4 上台名單公布
+					h4 &nbsp;
+					div.des
+						h4 4/27 公佈 30 組決選名單
+						h4 參加五分鐘創業競賽
+				div.arrow
+				div.circle
+					h1 4
+					h4 五分鐘種子
+					h4 創業競賽
+					div.des
+						h4 5/8(五) 14:00 ~ 18:00
+						h4 每組上台五分鐘，時間一到消音下台
+						h4 請在時間內說服評審給你50萬創業基金，驗證你的想法！
+				div.arrow
+				div.circle
+					h1 5
+					h4 簽訂合約
+					h4 發放獎金50萬
+					div.des(style='margin:0 -50% 0 -50%;')
+						h4 簽訂合約，依照臺大鑽石種子基金規定
+						h4 50 萬獎金分兩期發放
+			//- img(src='images/flow.png' style='width: 85%;')
+		div.container-fluid.title#div_procedure(style='padding: 8%')
+			h1(style='padding-bottom: 7%;') 競賽辦法
+			div.container-fluid.stage#div_stageFst
+				h2 第一階段初選：提交創業概念說明書
+				h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
+			div.container-fluid.content(style='background-color: #F8F7F7; margin-bottom:7%;')
+				div.col-md-6
+					h2 創業概念說明書需包括
+					p 封面 + 內頁 最多 10 頁為限
+					img(src='images/proposal.png' style='width: 90%;')
+				div.col-md-6
+					h2 評選標準
+					// div#canvas-holder(style='padding-right: 10%; padding-top: 10%;')
+						canvas#chart-area(style='width: 120%;')
+					img(src='images/standard.png' style='width: 70%;')
+			div.container-fluid.stage.second#div_stageSnd
+				h2 第二階段，五分鐘種子競賽！
+			div.container-fluid.content(style='background-color: #F8F7F7;')
+				div.row
+					p
+						| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
+						| 請在五分鐘內，闡述你的理念。
+						| 說服台下的評審，你就是『希望的種子』。 
 					br
-					span.red A:
-					| 	獎金分兩期發放，您可以在創業概念企劃書中寫您第一階段及第二階段需要的額度。
-				br
+				div.col-md-6
+					h2(style='padding-bottom: 3%;') 競賽規則
+					p
+						| 5/8(五) 14:00 ~ 18:00
+						| 每組上台五分鐘，時間一到消音下台
+						| 請說服評審給你50萬創業基金
+						| 驗證你的想法！
+						
+				div.col-md-6(style='border-left: 1px solid #000000;')
+					h2(style='line-height: 10%;') 獎金：新台幣 
+						span(style='color: #EB623F;') 50 萬元
+					h2 （ 總獎金 750 萬元 ）
+					h5(style='color: #999999; white-space: pre;') 
+						| *評審小組與主辦單位得視競賽情形作成從缺、或獎金增額之決議。
+						| 主辦單位保有修改、終止、變更活動內容細節之權利，且不另行通知。
+					br
+					h2 獎金發放方式
+					h4 依照鑽石種子基金管理辦法發放
+		div.container-fluid.content#div_apply
+			h1 線上報名
+			h2(style='color: #BBBBBB;') 3/23(一) 開始報名 !
+
+			div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 10% 5% 10%; margin: 0 10% 0 10%; font-size: 110%;')
+				div.row
+					div.col-md-3
+						a.btn.btn-default.btn-lg(href='/attachment/01_comp_rules.pdf' target='_blank')
+							span.glyphicon.glyphicon-circle-arrow-down 
+
+						label.control-label.downlabel
+							| 臺大種子創業競賽
+							br
+							| 報名須知
+					div.col-md-3
+						a.btn.btn-default.btn-lg(href='/attachment/02_affidavit.pdf' target='_blank')
+							span.glyphicon.glyphicon-circle-arrow-down 
+
+						label.control-label.downlabel
+							| 臺大鑽石種子基金
+							br
+							| 切結書
+					div.col-md-3
+						a.btn.btn-default.btn-lg(href='/attachment/03_equity_agreement.pdf' target='_blank')
+							span.glyphicon.glyphicon-circle-arrow-down 
+						label.control-label.downlabel
+							| 臺大鑽石股權同意書
+					div.col-md-3
+						a.btn.btn-default.btn-lg(href='/attachment/04_comp_table.doc' target='_blank')
+							span.glyphicon.glyphicon-circle-arrow-down 
+						label.control-label.downlabel
+							| 臺大種子創業競賽
+							br 
+							| 報名表格
+							br
+							| (填妥後上傳)
+						//- a.btn.btn-info.btn-lg(href='#')
+							
+
+			div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 0 5% 0; margin: 0 10% 0 10%; font-size: 110%;')
+				div.row
+					div.col-md-8
+						form.form-horizontal
+							div.form-group
+								label.col-sm-3.control-label 團隊名稱
+								div.col-sm-9
+									input.form-control(disabled)
+							div.form-group
+								label.col-sm-3.control-label 概念(商品)名稱
+								div.col-sm-9
+									input.form-control(disabled)
+							
+				div.row
+					div.col-md-6
+						form.form-horizontal
+							div.form-group
+								label.col-sm-4.control-label 聯絡人
+								div.col-sm-8
+									input.form-control(disabled)
+							div.form-group
+								label.col-sm-4.control-label 手機
+								div.col-sm-8
+									input.form-control(disabled)
+							div.form-group
+								label.col-sm-4.control-label 電子信箱
+								div.col-sm-8
+									input.form-control(disabled)
+				div.row
+					div.col-md-2
+					div.col-md-9(style='text-align: left;')
+						label.control-label 創業概念 (300字以內)：
+						textarea.form-control(rows="5" disabled)
+						button.btn.rec_btn.s(style='width: 100%; margin: 0;')
+							span(style='margin-right: 20px;')
+								img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+							| 創業說明書上傳
+
+
+
+
+		div.container-fluid.content#div_qna
+			h1 Q & A
+			div.ext-div
+				div.inn-div
+
+					p
+						span.red Q:
+						| 	請問畢業校友可以報名嗎？
+						br
+						span.red A:
+						| 	可以，只要團隊成員內有至少一位臺大學生或校友即可參賽。
+					br
+					p
+						span.red Q:
+						| 	請問獎金發放方式？
+						br
+						span.red A:
+						| 	獎金在第二期競賽結束後，簽署完股權同意書即發放全額50萬獎金(含稅)
+						| 	並在領取獎勵金後六個月內，主動提交創業概念驗證結果報告。
+
+					br
+					p
+						span.red Q:
+						| 	是否餅越大，越容易拿獎呢？
+						br
+						span.red A:
+						| 	不是的，我們在第一階段就會針對您團隊能力以及可行性來進行評估。
+
+		div.container-fluid#footer1
+			div.col-md-4#link_menu
+				p(style='color: #999999;') 選單
+				hr(style='border-color: #4D4D4D;')
+				//- div.container
+				div.col-md-6(style='padding: 0;')
+					a#a_top(href='#') 首頁
+					br
+					a#a_spirit(href='#') 競賽宗旨
+					br
+					a#a_flow(href='#') 競賽流程
+					br
+					a#a_apply(href='#') 線上報名
+				div.col-md-6(style='padding: 0;')
+					a#procedure(href='#') 競賽辦法
+					br
+					a#a_stageFst(href='#' style='margin-left: 15%;') 第一階段初選
+					br
+					a#a_stageSnd(href='#' style='margin-left: 15%;') 第二階段
+					br
+					a#a_qna(href='#') Q & A
+			div.col-md-4
+				p(style='color: #999999;') 關於
+				hr(style='border-color: #4D4D4D;')
 				p
-					span.red Q:
-					| 	是否餅越大，越容易拿獎呢？
-					br
-					span.red A:
-					| 	不是的，我們在第一階段就會針對您團隊能力以及可行性來進行評估。
+					| 為提升臺灣創業環境，鼓勵臺灣人勇敢逐夢，
+					| 臺大創創中心舉辦『臺大種子創業競賽』，
+					| 希望能幫助創業團隊，點燃夢想。
+					| 不怕創業失敗，只怕徒留遺憾，
+					| 只要還有夢想，我們給你機會。
 
-	div.container-fluid#footer1
-		div.col-md-4#link_menu
-			p(style='color: #999999;') 選單
-			hr(style='border-color: #4D4D4D;')
-			//- div.container
-			div.col-md-6(style='padding: 0;')
-				a#a_top(href='#') 首頁
-				br
-				a#a_spirit(href='#') 競賽宗旨
-				br
-				a#a_flow(href='#') 競賽流程
-				br
-				a#a_apply(href='#') 線上報名
-			div.col-md-6(style='padding: 0;')
-				a#procedure(href='#') 競賽辦法
-				br
-				a#a_stageFst(href='#' style='margin-left: 15%;') 第一階段初選
-				br
-				a#a_stageSnd(href='#' style='margin-left: 15%;') 第二階段
-				br
-				a#a_qna(href='#') Q & A
-		div.col-md-4
-			p(style='color: #999999;') 關於
-			hr(style='border-color: #4D4D4D;')
-			p
-				| 為提升臺灣創業環境，鼓勵臺灣人勇敢逐夢，
-				| 臺大創創中心舉辦『臺大種子創業競賽』，
-				| 希望能幫助創業團隊，點燃夢想。
-				| 不怕創業失敗，只怕徒留遺憾，
-				| 只要還有夢想，我們給你機會。
+			div.col-md-4
+				p(style='color: #999999;' itemprop='name') 臺大種子創業競賽
+				hr(style='border-color: #4D4D4D;')
+				p(itemprop='description')
+					| 第一階段初選:  創業概念說明文件
+					| 收件期間:  2015 年 3/23 至 4/5 截止
+					| 第二階段決選:  上台五分鐘闡述你的理念，
+					| 說服評審給你 50 萬，驗證你的創業概念！
+					| 決選日期:  5/8 (五) 下午 13:00~18:00
+					| 總獎金:  750 萬元
 
-		div.col-md-4
-			p(style='color: #999999;') 臺大種子創業競賽
-			hr(style='border-color: #4D4D4D;')
-			p
-				| 第一階段初選:  創業概念說明文件
-				| 收件期間:  2015 年 3/23 至 4/5 截止
-				| 第二階段決選:  上台五分鐘闡述你的理念，
-				| 說服評審給你 50 萬，驗證你的創業概念！
-				| 決選日期:  5/8(五) 下午 13:00~18:00
-				| 總獎金:  750 萬元
+				button.btn.rec_btn.xs#btn_apply
+					span(style='margin-right: 20px;')
+						img(src='images/plus_symbol_red.png' style='margin-top: -4px;')
+					| 馬上報名
 
-			button.btn.rec_btn.xs#btn_apply
-				span(style='margin-right: 20px;')
-					img(src='images/plus_symbol_red.png' style='margin-top: -4px;')
-				| 馬上報名
+		span(itemprop="location" itemscope itemtype="http://schema.org/Place") 
+			meta(itemprop="name" content="Taiwan")
+		meta(itemprop="url" content="http://tec.ntu.edu.tw/") 
+		meta(itemprop="startDate" content="2015-03-23")
 
 	div.container-fluid#footer2
 		p © 2015 臺大創創中心
+
 
