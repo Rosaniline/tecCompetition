@@ -148,7 +148,7 @@ block content
 			div.container-fluid.stage#div_stageFst
 				h2 第一階段初選：提交創業概念說明書
 				h4 評審會從中挑選 30 隊，獲得五分鐘種子資格競賽
-			div.container-fluid.content(style='background-color: #F8F7F7; margin-bottom:7%;')
+			div.container-fluid.content(style='background-color: #f4f1f1; margin-bottom:7%;')
 				div.col-md-6
 					h2 創業概念說明書需包括
 					p 封面 + 內頁 最多 10 頁為限
@@ -160,7 +160,7 @@ block content
 					img(src='images/standard.png' style='width: 70%;')
 			div.container-fluid.stage.second#div_stageSnd
 				h2 第二階段，五分鐘種子競賽！
-			div.container-fluid.content(style='background-color: #F8F7F7;')
+			div.container-fluid.content(style='background-color: #f4f1f1;')
 				div.row
 					p
 						| 當你一上台，便會開始倒數五分鐘，結束後消音下台。
@@ -187,9 +187,10 @@ block content
 					h4 依照鑽石種子基金管理辦法發放
 		div.container-fluid.content#div_apply
 			h1 線上報名
-			h2(style='color: #BBBBBB;') 3/23(一) 開始報名 !
+			h2(style='color: #BBBBBB;') 距離報名時間 3/30(一) 還有 
+				span#apply_time(style='color: #BBBBBB;')  
 
-			div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 10% 5% 10%; margin: 0 10% 0 10%; font-size: 110%;')
+			//- div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 10% 5% 10%; margin: 0 10% 0 10%; font-size: 110%;')
 				div.row
 					div.col-md-3
 						a.btn.btn-default.btn-lg(href='/attachment/01_comp_rules.pdf' target='_blank')
@@ -224,43 +225,98 @@ block content
 						//- a.btn.btn-info.btn-lg(href='#')
 							
 
-			div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 0 5% 0; margin: 0 10% 0 10%; font-size: 110%;')
-				div.row
-					div.col-md-8
-						form.form-horizontal
-							div.form-group
-								label.col-sm-3.control-label 團隊名稱
-								div.col-sm-9
-									input.form-control(disabled)
-							div.form-group
-								label.col-sm-3.control-label 概念(商品)名稱
-								div.col-sm-9
-									input.form-control(disabled)
-							
-				div.row
-					div.col-md-6
-						form.form-horizontal
-							div.form-group
-								label.col-sm-4.control-label 聯絡人
-								div.col-sm-8
-									input.form-control(disabled)
-							div.form-group
-								label.col-sm-4.control-label 手機
-								div.col-sm-8
-									input.form-control(disabled)
-							div.form-group
-								label.col-sm-4.control-label 電子信箱
-								div.col-sm-8
-									input.form-control(disabled)
-				div.row
-					div.col-md-2
-					div.col-md-9(style='text-align: left;')
-						label.control-label 創業概念 (300字以內)：
-						textarea.form-control(rows="5" disabled)
-						button.btn.rec_btn.s(style='width: 100%; margin: 0;')
-							span(style='margin-right: 20px;')
-								img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
-							| 創業說明書上傳
+			div(style='border: 1px solid #CCCCCC; background-color: white; padding:5% 0 5% 0; margin: 0 10% 0 10%; font-size: 110%; text-align: right;')
+				form.form-horizontal#ss-form(action='https://docs.google.com/forms/d/1ynJR7-JrASi2TLGWR9BuFFHXuHX0juB5M1WMAkFGbyg/formResponse' method='POST' target='_self' onsubmit='')
+					div.row
+						div.form-group
+							div.col-md-2
+								label.control-label(for='entry_1129696838') 團隊名稱
+							div.col-md-6
+								input.form-control#entry_1129696838(name='entry.1129696838')
+					div.row
+						div.form-group
+							div.col-md-2
+								label.control-label(for='entry_1566565934') 聯絡人
+							div.col-md-4
+								input.form-control#entry_1566565934(name='entry.1566565934')
+						div.form-group
+							div.col-md-2
+								label.control-label(for='entry_1456414545') 手機
+							div.col-md-4
+								input.form-control#entry_1456414545(name='entry.1456414545')
+						div.form-group
+							div.col-md-2
+								label.control-label(for='entry_992933071') 電子信箱
+							div.col-md-4
+								input.form-control#entry_992933071(name='entry.992933071')
+					div.row
+						div.form-group
+							div.col-md-2
+								label.control-label(for='entry_1614776015') 創業概念
+									br
+									| (300字以內)
+							div.col-md-9
+								textarea.form-control#entry_1614776015(rows="5" name='entry.1614776015')
+					div.row
+						div.form-group
+							div.col-md-2
+								label.control-label 請先詳閱相關文件
+							div.col-md-9
+								div.row
+									div.col-md-4
+										a.btn.square(target="_blank" href="/attachment/01_comp_rules.pdf")
+											img(src='images/PDFicon.png')
+											br
+											label.control-label 臺大種子創業競賽
+											br
+											| 報名須知
+									div.col-md-4
+										a.btn.square(target="_blank" href="/attachment/02_affidavit.pdf")
+											img(src='images/PDFicon.png')
+											br
+											label.control-label 臺大鑽石種子基金
+											br
+											| 切結書
+									div.col-md-4
+										a.btn.square(target="_blank" href="/attachment/03_equity_agreement.pdf")
+											img(src='images/PDFicon.png')
+											br
+											label.control-label 臺大鑽石
+											br
+											| 授權同意書
+					// div.row
+						div.form-group
+							div.col-md-2
+								label.control-label 確認條款
+							div.col-md-9
+								div.checkbox
+									label
+									//- input(type='checkbox') 確認條款
+					div.row
+						div.form-group
+							div.col-md-2
+								label.control-label 請將本表填妥後上傳
+							div.col-md-9
+								a.btn.square(target="_blank" href='/attachment/04_comp_table.doc')
+									img(src='images/download_icon.png')
+									span
+										label.control-label 臺大種子創業競賽報名表格
+					// div.row
+						div.form-group
+							div.col-md-2
+							div.col-md-9
+								button.btn.rec_btn.s#uploadFile(style='width: 100%; margin: 0;' type="submit" value="Upload File" onclick="this.value='Uploading..';uploadFile();")
+									span(style='margin-right: 20px;')
+										img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+									| 創業說明書上傳
+					div.row
+						div.form-group
+							div.col-md-2
+							div.col-md-9
+								button.btn.rec_btn.s#ss-submit(style='width: 100%; margin: 0;' type='submit' name='submit')
+									span(style='margin-right: 20px;')
+										img(src='images/plus_symbol.png' style='width: auto; margin-top: -4px;')
+									| 報名
 
 
 
@@ -328,10 +384,10 @@ block content
 				hr(style='border-color: #4D4D4D;')
 				p(itemprop='description')
 					| 第一階段初選:  創業概念說明文件
-					| 收件期間:  2015 年 3/23 至 4/5 截止
+					| 收件期間:  2015 年 3/30 至 4/5 截止
 					| 第二階段決選:  上台五分鐘闡述你的理念，
 					| 說服評審給你 50 萬，驗證你的創業概念！
-					| 決選日期:  5/8 (五) 下午 13:00~18:00
+					| 決選日期:  5/8 (五) 下午 14:00~18:00
 					| 總獎金:  750 萬元
 
 				button.btn.rec_btn.xs#btn_apply

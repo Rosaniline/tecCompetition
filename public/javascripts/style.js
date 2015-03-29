@@ -24,10 +24,10 @@ $(document).ready(function(){
 		adaptiveHeight: true,
 		auto: true,
 		pager: false,
-		pause: 3000
+		pause: 3000,
+		keyboardEnabled: true
 	});
 
-	
 	$(document).on("click", "#img_logo", function(e){
 
 		// Prevent a page reload when a link is pressed
@@ -135,7 +135,28 @@ $(document).ready(function(){
 	    	}, 300);
 	});
 
+
+	$(function() {
+	    $("#ss-form").on("submit", function(e) {
+			e.preventDefault();
+			$.ajax({
+				url: $(this).attr("action"),
+				type: 'POST',
+				data: $(this).serialize(),
+				beforeSend: function() {
+					$("#message").html("sending...");
+				},
+				success: function(data) {
+					$("#message").hide();
+					$("#response").html(data);
+				}
+			});
+		});
+	});
+
+
 });
+
 
 $(window).scroll(function(){
 
