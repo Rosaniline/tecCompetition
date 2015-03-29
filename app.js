@@ -4,9 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer = require('multer');
+var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var uploads = require('./routes/upload');
 
 var http = require('http');
 
@@ -29,8 +32,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Configure the multer.
+var done = false;
+app.use(multer({ dest: './uploads/', 
+    rename: function(fieldname, filename) {
+
+        var filesInFolder = fs.readdirSync(path.join(__dirname, 'uploads')).length;
+
+        return (filesInFolder + 1) + '_' + filename;
+    },
+    onFileUploadStart: function(file) {
+        console.log(file.originalname + 'is starting to upload ... ')
+    },
+    onFileUploadComplete: function(file) {
+        console.log(file.fieldname + 'is uploaded to ' + file.path)
+        done = true;
+    }
+}));
+
 app.use('/', routes);
 app.use('/users', users);
+app.use('/upload', uploads);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,7 +61,10 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-// error handlers
+
+
+
+
 
 // development error handler
 // will print stacktrace

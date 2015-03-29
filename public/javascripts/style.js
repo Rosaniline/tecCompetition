@@ -135,11 +135,37 @@ $(document).ready(function(){
 	    	}, 300);
 	});
 
+    $('.btn-file').on('change', function(event, numFiles, label) {
 
-	$(function() {
-	    $("#ss-form").on("submit", function(e) {
-			e.preventDefault();
-			$.ajax({
+
+    	var elem = document.getElementById("file_text");
+    	elem.value = "";
+    	var fileName = $("input:file").val().split('/').pop().split('\\').pop();
+    	
+		elem.value = fileName;
+        
+    });
+
+	$('#ss-submit').on('click', function(event) {
+
+		if ( document.getElementById("file_text").value == "" ) {
+			alert("請上傳報名表格！");
+		}
+
+		else {
+			$('#uploadForm').ajaxSubmit({
+
+	            error: function(xhr) {
+					status('Error: ' + xhr.status);
+	            },
+
+	            success: function(response) {
+					console.log(response);
+					$(this).css('display', 'none');
+	            }
+	        });
+
+			$('#ss-form').ajaxSubmit({
 				url: $(this).attr("action"),
 				type: 'POST',
 				data: $(this).serialize(),
@@ -151,7 +177,13 @@ $(document).ready(function(){
 					$("#response").html(data);
 				}
 			});
-		});
+
+			$('#apply_ing').css('display', 'none');
+			$('#apply_done').css('display', 'block');
+		}
+
+	    return false;
+
 	});
 
 
