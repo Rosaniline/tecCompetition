@@ -200,8 +200,6 @@ function alignNavbar(scroll) {
 
 	scroll = Math.max(0, (Math.min(150, scroll - 730 + 200)));
 
-	// console.log();
-
 	$('#img_logo').css('width', (75 - scroll/6) + '%');
 
 	var h = parseInt($('#img_logo').css('height'))/2 - 10;
