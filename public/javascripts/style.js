@@ -13,7 +13,30 @@ $(document).ready(function(){
 
 	$("#img_logo").css({
 		"cursor": "pointer"
-	})
+	});
+
+	$('.panel-div').on('click', function(event) {
+		event.preventDefault();
+
+		if ( $(this).hasClass('active') ) {
+			$(this).removeClass('active');
+			$(this).find('img').attr('src', '/images/plus_symbol_grey.png');
+			// console.log($(this).find('img').attr('src'));
+		}
+
+		else {
+			$('.panel-div').removeClass('active');
+			$('.panel-div').find('img').attr('src', '/images/plus_symbol_grey.png');
+			$(this).addClass('active');
+			console.log($(this).find('img').attr('src'));
+			$(this).find('img').attr('src', '/images/minus_symbol_grey.png');
+		}
+
+		
+				
+
+	});
+
 
 	$('.banner_slider').bxSlider({
 		slideWidth: window.width,
@@ -200,7 +223,9 @@ function alignNavbar(scroll) {
 
 	scroll = Math.max(0, (Math.min(150, scroll - 730 + 200)));
 
-	$('#img_logo').css('width', (75 - scroll/6) + '%');
+	console.log(scroll);
+
+	$('#img_logo').css('width', (33 - scroll/14) + '%');
 
 	var h = parseInt($('#img_logo').css('height'))/2 - 10;
 

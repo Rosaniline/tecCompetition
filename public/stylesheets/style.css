@@ -1,5 +1,12 @@
 /*@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");*/
 
+body { 
+   overflow-x: hidden;
+}
+
+.bx-wrapper {
+	margin-bottom: 0px;
+}
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
 	.left-border { 
@@ -295,9 +302,34 @@ h2 {
 	color: #EB623F;
 }
 
-#div_news{
-	background-color: #F8F7F7;
-	
+#div_news a {
+	color: inherit;
+    /*display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;*/
+} 
+
+#div_news .panel-div {
+    display: block;
+    background-color: #f4f1f1;
+    border: 1px solid #CCCCCC;
+    padding: 10px 10px 10px 35px;
+    cursor: pointer;
+}
+
+#div_news .panel-div.active {
+
+	color: #EB623F;
+	background-color: white;
+}
+
+
+.panel-body {
+
+	padding: 30px 10px 30px 35px;
+	border: 1px solid #CCCCCC;
+	font-size: 120%;
 }
 
 
